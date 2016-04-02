@@ -11,5 +11,30 @@ import Parse
 
 
 class Post: NSObject {
+    
+    
+    var title: String?
+    
+    init(title: String){
+        self.title = title
+    }
+    
+    func post(){
+        let post = PFObject(className: "news")
+        
+        post["title"] = title!
+        
+        post.saveInBackgroundWithBlock {
+            
+            (success: Bool, error: NSError?) -> Void in
+            
+            if(success){
+                print("cool")
+            }else{
+                print(error?.localizedDescription)
+                
+            }
+        }
+    }
 
 }

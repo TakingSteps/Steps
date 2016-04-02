@@ -9,9 +9,13 @@
 import UIKit
 
 class PhotosViewController: UIViewController {
+    
+    
+    
 
     @IBOutlet weak var PhotosLabel: UILabel!
     
+    @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
          self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -23,6 +27,12 @@ class PhotosViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func postButton(sender: AnyObject) {
+      let title = Post(title: textField.text!)
+        title.post()
+        
+        
+    }
 
     /*
     // MARK: - Navigation
