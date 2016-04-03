@@ -44,6 +44,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.news = news
                 self.tableView.reloadData()
                 print("woo")
+                print(PFUser.currentUser()?.username)
             } else {
                 // handle error
                 print(error?.localizedDescription)

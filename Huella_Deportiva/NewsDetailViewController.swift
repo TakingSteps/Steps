@@ -17,6 +17,7 @@ class NewsDetailViewController: UIViewController {
     
     @IBOutlet weak var newsBodyLabel: UILabel!
     
+    @IBOutlet weak var authorLabel: UILabel!
     var news: [PFObject]!
     var index: Int?
     
@@ -30,6 +31,7 @@ class NewsDetailViewController: UIViewController {
         newsTitleLabel.text = new["title"] as? String
         newsBodyLabel.text = new["body"] as? String
         
+        authorLabel.text = new["user"] as? String
         
 
         

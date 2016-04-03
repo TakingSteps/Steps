@@ -15,11 +15,14 @@ class Post: NSObject {
     
     var title: String?
     var newsBody: String?
+    var user: String?
     
     
-    init(title: String, newsBody: String){
+    
+    init(title: String, newsBody: String, user: String){
         self.title = title
         self.newsBody = newsBody
+        self.user = user
         
     }
     
@@ -30,7 +33,7 @@ class Post: NSObject {
         
         post.setObject(title!, forKey: "title")
         post.setObject(newsBody!, forKey: "body")
-        
+        post.setObject(user!, forKey: "user")
         
         
         post.saveInBackgroundWithBlock {

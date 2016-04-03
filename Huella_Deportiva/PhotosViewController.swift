@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+
 
 class PhotosViewController: UIViewController {
     
@@ -29,7 +31,8 @@ class PhotosViewController: UIViewController {
     }
     
     @IBAction func postButton(sender: AnyObject) {
-      let noticia = Post(title: textField.text!, newsBody: bodyField.text! )
+        let noticia = Post(title: textField.text!, newsBody: bodyField.text!, user: (PFUser.currentUser()?.username!)!  )
+       
         noticia.post()
         
         

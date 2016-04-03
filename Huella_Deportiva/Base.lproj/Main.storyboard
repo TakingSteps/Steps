@@ -40,11 +40,25 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cl-K9-rZq">
+                                                    <rect key="frame" x="8" y="144" width="52" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4e-yv-jFW">
+                                                    <rect key="frame" x="238" y="144" width="74" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="authorLabel" destination="9Cl-K9-rZq" id="hDB-8w-ogV"/>
                                             <outlet property="newsBodyLabel" destination="Faw-Gh-PQk" id="hWe-u0-kj0"/>
                                             <outlet property="newsTitle" destination="g5M-GY-VSf" id="P91-5y-B3Q"/>
+                                            <outlet property="timeLabel" destination="q4e-yv-jFW" id="Oyb-Ra-jEF"/>
                                             <segue destination="2Vq-Zc-8Bw" kind="show" identifier="SegueToDetail" id="hdA-Qg-n7n"/>
                                         </connections>
                                     </tableViewCell>
@@ -257,6 +271,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkC-qS-gR6">
+                                <rect key="frame" x="137" y="477" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="postButton:" destination="u7e-Zv-fKm" eventType="touchUpInside" id="TDf-2i-JiM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95149569153577662" green="0.95149569153577662" blue="0.95149569153577662" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -328,18 +349,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1W-ln-hG1">
-                                <rect key="frame" x="146" y="522" width="38" height="30"/>
-                                <state key="normal" title="share"/>
-                                <connections>
-                                    <action selector="shareButton:" destination="2Vq-Zc-8Bw" eventType="touchUpInside" id="lAS-mI-zBL"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smj-0b-VDa">
+                                <rect key="frame" x="134" y="462" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="authorLabel" destination="smj-0b-VDa" id="aFa-BU-oG3"/>
                         <outlet property="newsBodyLabel" destination="NAg-er-qo9" id="8wO-jo-1kH"/>
                         <outlet property="newsImage" destination="XzB-Wn-mY6" id="GZg-no-apY"/>
                         <outlet property="newsTitleLabel" destination="QFx-4C-cJo" id="PbZ-Fa-p0g"/>
