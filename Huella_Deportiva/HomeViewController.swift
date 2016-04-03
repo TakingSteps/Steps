@@ -84,6 +84,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
+    @IBAction func logoutButton(sender: AnyObject) {
+        PFUser.logOutInBackground()
+        dismissViewControllerAnimated(false, completion: nil)
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         

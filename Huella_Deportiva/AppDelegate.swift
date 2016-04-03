@@ -20,15 +20,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        Parse.initializeWithConfiguration(
+      /*  Parse.initializeWithConfiguration(
             ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = "huelladeportiva"
                 configuration.clientKey = "huellita"
                 configuration.server = "https://huelladeportiva.herokuapp.com/parse"
             })
+        )*/
+        Parse.initializeWithConfiguration(
+            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "myAppId"
+                configuration.clientKey = "myMasterKey"
+                configuration.server = "https://stormy-cove-91978.herokuapp.com/parse"
+            })
         )
-       
-                
+        
+        if PFUser.currentUser() != nil {
+            // if there is a logged in user then load the home view controller
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyBoard.instantiateViewControllerWithIdentifier("feed") as UIViewController
+            self.window?.rootViewController = viewController
+            
+            self.window?.makeKeyAndVisible()
+            
+            
+        }else{
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyBoard.instantiateViewControllerWithIdentifier("login") as UIViewController
+            self.window?.rootViewController = viewController
+            
+            self.window?.makeKeyAndVisible()
+            
+        }
         
         
         

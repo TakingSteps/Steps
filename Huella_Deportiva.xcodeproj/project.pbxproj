@@ -23,6 +23,7 @@
 		E639CDF11C9223C100B5A744 /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639CDF01C9223C100B5A744 /* SportsViewController.swift */; };
 		E639CDF31C92242F00B5A744 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639CDF21C92242F00B5A744 /* PhotosViewController.swift */; };
 		F60B1DD41CADEC0B00023A99 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B1DD31CADEC0B00023A99 /* Post.swift */; };
+		F6A9DA831CB0DBF7009CAEEA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A9DA821CB0DBF7009CAEEA /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E639CDF01C9223C100B5A744 /* SportsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
 		E639CDF21C92242F00B5A744 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		F60B1DD31CADEC0B00023A99 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F6A9DA821CB0DBF7009CAEEA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				E639CDEC1C92229500B5A744 /* ScheduleViewController.swift */,
 				E639CDEE1C92233600B5A744 /* StandingsViewController.swift */,
 				E639CDF01C9223C100B5A744 /* SportsViewController.swift */,
+				F6A9DA821CB0DBF7009CAEEA /* LoginViewController.swift */,
 				E639CDF21C92242F00B5A744 /* PhotosViewController.swift */,
 				E639CDEA1C921A7300B5A744 /* MenuTableViewController.swift */,
 			);
@@ -298,6 +301,7 @@
 				E639CDD81C8FC31200B5A744 /* PostCell.swift in Sources */,
 				E639CDF11C9223C100B5A744 /* SportsViewController.swift in Sources */,
 				E639CDDC1C8FCE1700B5A744 /* NewsDetailViewController.swift in Sources */,
+				F6A9DA831CB0DBF7009CAEEA /* LoginViewController.swift in Sources */,
 				E639CDE81C92146D00B5A744 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

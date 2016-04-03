@@ -22,7 +22,7 @@ class Post: NSObject {
     func post(){
         let post = PFObject(className: "news")
         
-        post["title"] = title!
+        post.setObject(title!, forKey: "title")
         
         post.saveInBackgroundWithBlock {
             
@@ -31,7 +31,7 @@ class Post: NSObject {
             if(success){
                 print("cool")
             }else{
-                print(error?.localizedDescription)
+                print(error?.code)
                 
             }
         }
