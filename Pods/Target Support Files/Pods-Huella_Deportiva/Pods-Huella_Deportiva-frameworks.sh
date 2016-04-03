@@ -87,6 +87,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Huella_Deportiva/AFNetworking.framework"
   install_framework "Pods-Huella_Deportiva/BDBOAuth1Manager.framework"
   install_framework "Pods-Huella_Deportiva/Bolts.framework"
+  install_framework "Pods-Huella_Deportiva/MBProgressHUD.framework"
   install_framework "Pods-Huella_Deportiva/Parse.framework"
   install_framework "Pods-Huella_Deportiva/SlideMenuControllerSwift.framework"
 fi
@@ -94,6 +95,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Huella_Deportiva/AFNetworking.framework"
   install_framework "Pods-Huella_Deportiva/BDBOAuth1Manager.framework"
   install_framework "Pods-Huella_Deportiva/Bolts.framework"
+  install_framework "Pods-Huella_Deportiva/MBProgressHUD.framework"
   install_framework "Pods-Huella_Deportiva/Parse.framework"
   install_framework "Pods-Huella_Deportiva/SlideMenuControllerSwift.framework"
 fi

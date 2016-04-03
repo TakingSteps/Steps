@@ -49,7 +49,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4e-yv-jFW">
                                                     <rect key="frame" x="238" y="144" width="74" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -73,9 +73,10 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1iW-RA-aRP">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="log out"/>
+                                <state key="normal" title="Post"/>
                                 <connections>
                                     <action selector="logoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7s-Jo-1r4"/>
+                                    <segue destination="u7e-Zv-fKm" kind="presentation" identifier="post" id="OUi-FT-mXc"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -154,6 +155,17 @@
                                     <segue destination="u7e-Zv-fKm" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="9SM-Jg-kPj"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Settings" id="vFY-bu-FNq">
+                                <rect key="frame" x="0.0" y="248" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vFY-bu-FNq" id="wwv-8b-7bx">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="t5N-Tv-iZB" kind="presentation" id="jQN-Yn-epM"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="6bt-hg-2yg" id="hXi-7d-1xh"/>
@@ -195,6 +207,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bej-cD-GBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="573" y="-1040"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="XB4-ol-oWl">
+            <objects>
+                <viewController id="t5N-Tv-iZB" customClass="SettingsViewController" customModule="Huella_Deportiva" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="acS-G4-kjx"/>
+                        <viewControllerLayoutGuide type="bottom" id="wuu-Lf-o5U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bmr-V3-65D">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUL-B8-7sb">
+                                <rect key="frame" x="50" y="156" width="221" height="255"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logoutButton:" destination="t5N-Tv-iZB" eventType="touchUpInside" id="45M-eL-fXk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="Vhb-XG-BwY" kind="presentation" identifier="logout" id="eD3-sS-uZk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nma-4d-dOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-123" y="-1716"/>
         </scene>
         <!--Sports View Controller-->
         <scene sceneID="iXh-fo-Ij2">
@@ -272,10 +315,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkC-qS-gR6">
-                                <rect key="frame" x="137" y="477" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="145" y="477" width="31" height="30"/>
+                                <state key="normal" title="Post"/>
                                 <connections>
                                     <action selector="postButton:" destination="u7e-Zv-fKm" eventType="touchUpInside" id="TDf-2i-JiM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0a-zm-XvK">
+                                <rect key="frame" x="11" y="50" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelBatman:" destination="u7e-Zv-fKm" eventType="touchUpInside" id="a7h-jG-wkU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -340,17 +390,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XzB-Wn-mY6">
-                                <rect key="frame" x="20" y="141" width="280" height="165"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAg-er-qo9">
-                                <rect key="frame" x="20" y="320" width="280" height="194"/>
+                                <rect key="frame" x="20" y="141" width="280" height="194"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smj-0b-VDa">
-                                <rect key="frame" x="134" y="462" width="52" height="21"/>
+                                <rect key="frame" x="20" y="343" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -362,7 +409,6 @@
                     <connections>
                         <outlet property="authorLabel" destination="smj-0b-VDa" id="aFa-BU-oG3"/>
                         <outlet property="newsBodyLabel" destination="NAg-er-qo9" id="8wO-jo-1kH"/>
-                        <outlet property="newsImage" destination="XzB-Wn-mY6" id="GZg-no-apY"/>
                         <outlet property="newsTitleLabel" destination="QFx-4C-cJo" id="PbZ-Fa-p0g"/>
                     </connections>
                 </viewController>
@@ -463,6 +509,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1Da-dT-RJ0"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="passwordText" destination="4BR-Z4-e2H" id="61h-GX-60l"/>
@@ -472,10 +519,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXH-9H-Ky2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="261"/>
+            <point key="canvasLocation" x="-455" y="-995"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="bBW-Uz-6d9"/>
+        <segue reference="OUi-FT-mXc"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -27,10 +27,10 @@ class PostCell: UITableViewCell {
             newsTitle.text = news["title"] as? String
             newsBodyLabel.text = news["body"] as? String
             authorLabel.text = news["user"] as? String
-            let timeStamp = news["_created_at"]["$date"]!
-                as? NSDate
+           // let timeStamp = news["_created_at"]["$date"]!
+              //  as? NSDate
             
-            timeLabel.text = "\(returnTime(timeStamp!))"
+           // timeLabel.text = "\(returnTime(timeStamp!))"
         }
     }
     

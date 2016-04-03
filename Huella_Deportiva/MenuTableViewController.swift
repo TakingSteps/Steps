@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class MenuTableViewController: UITableViewController {
     
@@ -15,7 +16,7 @@ class MenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TableArray = ["Home","Deportes","Itinerarios","Tabla de Posiciones", "Galeria de Fotos"]
+        TableArray = ["Home","Deportes","Itinerarios","Tabla de Posiciones", "Galeria de Fotos", "Settings"]
         
     
     }
@@ -33,6 +34,15 @@ class MenuTableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func logoutButton(sender: AnyObject) {
+        PFUser.logOutInBackground()
+        if PFUser.currentUser() != nil{
+            print("Something went wrong")
+        }else{
+            self.performSegueWithIdentifier("loginSegue", sender: nil)
+            print("good job")
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

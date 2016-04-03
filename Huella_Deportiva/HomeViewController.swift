@@ -31,13 +31,23 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         MenuButton.action = Selector("revealToggle:")
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
+        refreshData()
+        let refreshControl = UIRefreshControl()
+        
+        refreshControl.addTarget(self, action:"refreshControlAction:",forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.insertSubview(refreshControl, atIndex: 0)
+
+        
+    
+        tableView.reloadData()
+        // Do any additional setup after loading the view.
+    }
+    
+    func refreshData(){
         let query = PFQuery(className: "news")
         query.orderByDescending("createdAt")
         query.includeKey("author")
         query.limit = 20
-        
-        
-        
         
         query.findObjectsInBackgroundWithBlock { (news: [PFObject]?, error: NSError?) -> Void in
             if let news = news {
@@ -51,9 +61,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 print(error?.code)
             }
         }
-        
-        tableView.reloadData()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,9 +93,32 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     @IBAction func logoutButton(sender: AnyObject) {
-        PFUser.logOutInBackground()
-        dismissViewControllerAnimated(false, completion: nil)
+        self.performSegueWithIdentifier("post", sender: nil)
     }
+    
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+        let url = NSURL(refreshData())
+        let request = NSURLRequest(URL: url)
+        
+        
+        let session = NSURLSession(
+            configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
+            delegate:nil,
+            delegateQueue:NSOperationQueue.mainQueue()
+        )
+        
+        let task : NSURLSessionDataTask = session.dataTaskWithRequest(request,
+                                                                      completionHandler: { (data, response, error) in
+                                                                        
+                                                                        
+                                                                        self.tableView.reloadData()
+                                                                        refreshControl.endRefreshing()	
+        });
+        task.resume()
+    }
+    
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         

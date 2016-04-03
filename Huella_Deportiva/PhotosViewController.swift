@@ -8,6 +8,8 @@
 
 import UIKit
 import Parse
+import MBProgressHUD
+
 
 
 class PhotosViewController: UIViewController {
@@ -21,7 +23,7 @@ class PhotosViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+         //self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         // Do any additional setup after loading the view.
     }
 
@@ -35,8 +37,14 @@ class PhotosViewController: UIViewController {
        
         noticia.post()
         
-        
+        dismissViewControllerAnimated(false, completion: nil)
+
     }
+    @IBAction func cancelBatman(sender: AnyObject) {
+        dismissViewControllerAnimated(false, completion: nil)
+    }
+
+    
 
     /*
     // MARK: - Navigation
@@ -47,5 +55,5 @@ class PhotosViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
