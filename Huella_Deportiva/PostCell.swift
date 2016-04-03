@@ -18,6 +18,7 @@ class PostCell: UITableViewCell {
     var news: PFObject!{
         didSet{
             newsTitle.text = news["title"] as? String
+            newsBodyLabel.text = news["body"] as? String
         }
     }
     

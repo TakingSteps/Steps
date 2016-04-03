@@ -8,5 +8,7 @@ pod 'AFNetworking'
 pod 'BDBOAuth1Manager'
 pod 'Parse'
 pod ‘SlideMenuControllerSwift’
+pod ‘BDBOAuth1Manager’
+
 end
 

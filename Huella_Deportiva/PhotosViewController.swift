@@ -13,6 +13,7 @@ class PhotosViewController: UIViewController {
     
     
 
+    @IBOutlet weak var bodyField: UITextView!
     @IBOutlet weak var PhotosLabel: UILabel!
     
     @IBOutlet weak var textField: UITextField!
@@ -28,8 +29,8 @@ class PhotosViewController: UIViewController {
     }
     
     @IBAction func postButton(sender: AnyObject) {
-      let title = Post(title: textField.text!)
-        title.post()
+      let noticia = Post(title: textField.text!, newsBody: bodyField.text! )
+        noticia.post()
         
         
     }

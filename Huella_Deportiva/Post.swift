@@ -14,15 +14,24 @@ class Post: NSObject {
     
     
     var title: String?
+    var newsBody: String?
     
-    init(title: String){
+    
+    init(title: String, newsBody: String){
         self.title = title
+        self.newsBody = newsBody
+        
     }
+    
+    
     
     func post(){
         let post = PFObject(className: "news")
         
         post.setObject(title!, forKey: "title")
+        post.setObject(newsBody!, forKey: "body")
+        
+        
         
         post.saveInBackgroundWithBlock {
             

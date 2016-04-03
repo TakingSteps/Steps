@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+
 
 class NewsDetailViewController: UIViewController {
 
@@ -15,11 +17,22 @@ class NewsDetailViewController: UIViewController {
     
     @IBOutlet weak var newsBodyLabel: UILabel!
     
-    var news: News!
+    var news: [PFObject]!
+    var index: Int?
+    
+    //var new: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let new = news![index!]
+        
+        newsTitleLabel.text = new["title"] as? String
+        newsBodyLabel.text = new["body"] as? String
+        
+        
 
+        
         // Do any additional setup after loading the view.
     }
 
@@ -27,6 +40,24 @@ class NewsDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+   /* @IBAction func shareButton(sender: AnyObject) {
+        
+        let composer = TWTRComposer()
+        
+        composer.setText("just setting up my Fabric")
+        composer.setImage(UIImage(named: "fabric"))
+        
+        // Called from a UIViewController
+        composer.showFromViewController(self) { result in
+            if (result == TWTRComposerResult.Cancelled) {
+                println("Tweet composition cancelled")
+            }
+            else {
+                println("Sending tweet!")
+            }
+        }
+    }*/
     
 
     /*

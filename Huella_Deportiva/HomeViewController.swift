@@ -96,12 +96,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPathForCell(cell)
             
-            let selectedNew = news![indexPath!.row]
+            //let selectedNew = news![indexPath!.row]
+            let index = indexPath!.row
             
             
             let newsDetailVC = segue.destinationViewController as! NewsDetailViewController
             
-    //       newsDetailVC.news = selectedNew
+            newsDetailVC.news = news
+            newsDetailVC.index = index
+            
+            
+            
+            
+            
             
         }
     }
