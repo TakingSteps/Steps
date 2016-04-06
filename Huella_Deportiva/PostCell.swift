@@ -7,6 +7,8 @@
 //
 import Parse
 import UIKit
+import ParseUI
+
 
 class PostCell: UITableViewCell {
 
@@ -18,6 +20,8 @@ class PostCell: UITableViewCell {
     
     @IBOutlet weak var authorLabel: UILabel!
     
+    
+    @IBOutlet weak var photoView: PFImageView!
     var timeStampString: String?
     
     
@@ -27,7 +31,10 @@ class PostCell: UITableViewCell {
             newsTitle.text = news["title"] as? String
             newsBodyLabel.text = news["body"] as? String
             authorLabel.text = news["user"] as? String
-           // let timeStamp = news["_created_at"]["$date"]!
+            photoView.file = news["image"] as? PFFile
+            photoView.loadInBackground()
+            
+            // let timeStamp = news["_created_at"]["$date"]!
               //  as? NSDate
             
            // timeLabel.text = "\(returnTime(timeStamp!))"

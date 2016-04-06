@@ -16,14 +16,28 @@ class Post: NSObject {
     var title: String?
     var newsBody: String?
     var user: String?
+    var image: UIImage?
     
     
     
-    init(title: String, newsBody: String, user: String){
+    init(title: String, newsBody: String, user: String, image: UIImage){
         self.title = title
         self.newsBody = newsBody
         self.user = user
+        self.image = image
         
+        
+    }
+    
+    func getPFFileFromImage(image: UIImage?) -> PFFile? {
+        
+        if let image = image {
+            
+            if let imageData = UIImagePNGRepresentation(image) {
+                return PFFile(name: "image.png", data: imageData)
+            }
+        }
+        return nil
     }
     
     
@@ -34,6 +48,7 @@ class Post: NSObject {
         post.setObject(title!, forKey: "title")
         post.setObject(newsBody!, forKey: "body")
         post.setObject(user!, forKey: "user")
+        post.setObject(getPFFileFromImage(image)!, forKey: "image")
         
         
         post.saveInBackgroundWithBlock {

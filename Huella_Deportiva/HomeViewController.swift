@@ -54,7 +54,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.news = news
                 self.tableView.reloadData()
                 print("woo")
-                print(PFUser.currentUser()?.username)
+                
             } else {
                 // handle error
                 print(error?.localizedDescription)
@@ -86,11 +86,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
         
-        
-        
         return cell
     }
-    
     
     @IBAction func logoutButton(sender: AnyObject) {
         self.performSegueWithIdentifier("post", sender: nil)
@@ -107,12 +104,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             delegateQueue:NSOperationQueue.mainQueue()
         )
         
-        let task : NSURLSessionDataTask = session.dataTaskWithRequest(request,
-                                                                      completionHandler: { (data, response, error) in
+        let task : NSURLSessionDataTask = session.dataTaskWithRequest(request,completionHandler: { (data, response, error) in
                                                                         
-                                                                        
-                                                                        self.tableView.reloadData()
-                                                                        refreshControl.endRefreshing()	
+            self.tableView.reloadData()
+            refreshControl.endRefreshing()	
         });
         task.resume()
     }

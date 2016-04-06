@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'AB0621D00556C527C2E7B599'
+               BlueprintIdentifier = 'DF136EAAB9BF8DE72183C6BB'
                BlueprintName = 'Pods-Huella_Deportiva'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Huella_Deportiva.framework'>

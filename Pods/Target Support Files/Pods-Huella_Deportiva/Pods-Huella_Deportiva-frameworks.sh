@@ -89,6 +89,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Huella_Deportiva/Bolts.framework"
   install_framework "Pods-Huella_Deportiva/MBProgressHUD.framework"
   install_framework "Pods-Huella_Deportiva/Parse.framework"
+  install_framework "Pods-Huella_Deportiva/ParseUI.framework"
   install_framework "Pods-Huella_Deportiva/SlideMenuControllerSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -97,5 +98,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Huella_Deportiva/Bolts.framework"
   install_framework "Pods-Huella_Deportiva/MBProgressHUD.framework"
   install_framework "Pods-Huella_Deportiva/Parse.framework"
+  install_framework "Pods-Huella_Deportiva/ParseUI.framework"
   install_framework "Pods-Huella_Deportiva/SlideMenuControllerSwift.framework"
 fi

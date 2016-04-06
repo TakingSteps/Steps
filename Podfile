@@ -10,6 +10,7 @@ pod 'Parse'
 pod ‘SlideMenuControllerSwift’
 pod ‘BDBOAuth1Manager’
 pod ‘MBProgressHUD’
+pod ‘ParseUI’
 
 end
 
