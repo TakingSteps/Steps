@@ -48,13 +48,23 @@ class NewsDetailViewController: UIViewController {
         
         let user = PFUser.currentUser()!.username! as String
         let usern = new["user"] as! String
+        let adminStatus = PFUser.currentUser()?.objectForKey("admin") as! Int
         
-        if user != usern{
-            deleteButton.hidden = true
-            
-        }else{
+        
+     
+        if user == usern || adminStatus == 0 {
             deleteButton.hidden = false
+            print("okay man")
+        }else{
+            deleteButton.hidden = true
         }
+        
+        
+        
+        
+        
+        
+        
        
        
         

@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
                 self.performSegueWithIdentifier("loginSegue", sender: nil)
                 
             }else{
-                let alert = UIAlertController(title: "Something went wrong", message: "\(error!.description)", preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "Try again", message: "\(error!.localizedDescription)", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
                 

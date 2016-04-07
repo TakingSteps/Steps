@@ -39,7 +39,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         if ( c != 0 && d != 0){
            
-            let image = resizeImg(photoView.image!, newSize: CGSizeMake(200,200))
+            let image = resizeImg(self.image, newSize: CGSizeMake(200,200))
             let pfImage = getPFFileFromImage(image)
             
             
@@ -47,12 +47,17 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             newUser.username = userText.text
             newUser.password = passwordText.text
             newUser["prof_image"] = pfImage
+            newUser["admin"] = 1
+            
             newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 if success{
                     print("yay")
                     self.performSegueWithIdentifier("loginSegue", sender: nil)
                 }else{
                     print(error?.localizedDescription)
+                    let alert = UIAlertController(title: "Try again", message: "\(error!.localizedDescription)", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
                     }
             }
         }else{
