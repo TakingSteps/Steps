@@ -4,9 +4,10 @@
 
 The following **required** functionality is completed:
 
-- [ ] User can see the latest news
-- [ ] User can see a details of the news
-- [ ] User can se the schedule of the teams
+- [x] User can see the latest news
+- [x] User can see a details of the news
+- [x] User can post news
+- [x] User can "Step Foward" a post
 
 The following **optional** features are implemented:
 
