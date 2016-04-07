@@ -17,14 +17,16 @@ class Post: NSObject {
     var newsBody: String?
     var user: String?
     var image: UIImage?
+    var steps: Int?
     
     
     
-    init(title: String, newsBody: String, user: String, image: UIImage){
+    init(title: String, newsBody: String, user: String, image: UIImage, steps: Int){
         self.title = title
         self.newsBody = newsBody
         self.user = user
         self.image = image
+        self.steps = 0
         
         
     }
@@ -49,6 +51,9 @@ class Post: NSObject {
         post.setObject(newsBody!, forKey: "body")
         post.setObject(user!, forKey: "user")
         post.setObject(getPFFileFromImage(image)!, forKey: "image")
+        post.setObject(steps!, forKey: "steps")
+        
+        
         
         
         post.saveInBackgroundWithBlock {

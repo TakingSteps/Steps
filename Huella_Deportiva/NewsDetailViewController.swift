@@ -20,6 +20,7 @@ class NewsDetailViewController: UIViewController {
     
     @IBOutlet weak var photoView: PFImageView!
    
+    @IBOutlet weak var deleteButton: UIButton!
    
     @IBOutlet weak var authorLabel: UILabel!
     var news: [PFObject]!
@@ -44,6 +45,16 @@ class NewsDetailViewController: UIViewController {
         //let url = NSURL(string: (file?.url)!)
         //photoView.setImageWithURL(url!)
         //print(image)
+        
+        let user = PFUser.currentUser()!.username! as String
+        let usern = new["user"] as! String
+        
+        if user != usern{
+            deleteButton.hidden = true
+            
+        }else{
+            deleteButton.hidden = false
+        }
        
        
         
@@ -67,11 +78,39 @@ class NewsDetailViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    @IBAction func deleteButton(sender: AnyObject) {
+        let new = news![index!]
+        new.deleteInBackground()
+        
+        navigationController?.popViewControllerAnimated(true)
+               
+        
+        
+        
+    }
 
+    @IBAction func stepButton(sender: AnyObject) {
+       let new = news![index!]
+        
+        new.incrementKey("steps")
+        new.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                // The score key has been incremented
+            } else {
+                // There was a problem, check error.description
+            }
+        }
+        
+        stepButton.enabled = false
+
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBOutlet weak var stepButton: UIButton!
     
    /* @IBAction func shareButton(sender: AnyObject) {
         

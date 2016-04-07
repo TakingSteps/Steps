@@ -26,29 +26,28 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButton(sender: AnyObject) {
+        
+        
         PFUser.logInWithUsernameInBackground(userText.text!, password: passwordText.text!) { (user: PFUser?, error: NSError?) -> Void in
             if user != nil{
                 print("logged in")
                 self.performSegueWithIdentifier("loginSegue", sender: nil)
+                
+            }else{
+                let alert = UIAlertController(title: "Something went wrong", message: "\(error!.description)", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
                 
             }
         }
     }
 
     @IBAction func signUpButton(sender: AnyObject) {
-        let newUser = PFUser()
+       self.performSegueWithIdentifier("signUpSegue", sender: nil)
         
-        newUser.username = userText.text
-        newUser.password = passwordText.text
-        newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if success{
-                print("yay")
-                self.performSegueWithIdentifier("loginSegue", sender: nil)
-            }else{
-                print(error?.localizedDescription)
-                
-            }
-        }
+    }
+    @IBAction func onTap(sender: AnyObject) {
+         view.endEditing(true)
     }
     /*
     // MARK: - Navigation

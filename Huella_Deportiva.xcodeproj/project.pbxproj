@@ -24,6 +24,7 @@
 		E639CDF31C92242F00B5A744 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639CDF21C92242F00B5A744 /* PhotosViewController.swift */; };
 		F60B1DD41CADEC0B00023A99 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B1DD31CADEC0B00023A99 /* Post.swift */; };
 		F61D920C1CB1D65500B05FF4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61D920B1CB1D65500B05FF4 /* SettingsViewController.swift */; };
+		F69B18891CB4BB6E004EFDB3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B18881CB4BB6E004EFDB3 /* SignUpViewController.swift */; };
 		F6A9DA831CB0DBF7009CAEEA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A9DA821CB0DBF7009CAEEA /* LoginViewController.swift */; };
 		F6DE4E661CB1A7AE00FBA77E /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE4E651CB1A7AE00FBA77E /* TwitterClient.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		E639CDF21C92242F00B5A744 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		F60B1DD31CADEC0B00023A99 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F61D920B1CB1D65500B05FF4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F69B18881CB4BB6E004EFDB3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F6A9DA821CB0DBF7009CAEEA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F6DE4E651CB1A7AE00FBA77E /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,9 +131,9 @@
 				E639CDEC1C92229500B5A744 /* ScheduleViewController.swift */,
 				E639CDEE1C92233600B5A744 /* StandingsViewController.swift */,
 				E639CDF01C9223C100B5A744 /* SportsViewController.swift */,
-				F6A9DA821CB0DBF7009CAEEA /* LoginViewController.swift */,
 				E639CDF21C92242F00B5A744 /* PhotosViewController.swift */,
 				E639CDEA1C921A7300B5A744 /* MenuTableViewController.swift */,
+				F69B18871CB4BB4B004EFDB3 /* LogInViews */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -172,6 +174,15 @@
 			);
 			name = SupportingFiles;
 			path = Huella_Deportiva;
+			sourceTree = "<group>";
+		};
+		F69B18871CB4BB4B004EFDB3 /* LogInViews */ = {
+			isa = PBXGroup;
+			children = (
+				F6A9DA821CB0DBF7009CAEEA /* LoginViewController.swift */,
+				F69B18881CB4BB6E004EFDB3 /* SignUpViewController.swift */,
+			);
+			name = LogInViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +318,7 @@
 				E639CDED1C92229500B5A744 /* ScheduleViewController.swift in Sources */,
 				F61D920C1CB1D65500B05FF4 /* SettingsViewController.swift in Sources */,
 				E639CDDA1C8FC52500B5A744 /* News.swift in Sources */,
+				F69B18891CB4BB6E004EFDB3 /* SignUpViewController.swift in Sources */,
 				E639CDD81C8FC31200B5A744 /* PostCell.swift in Sources */,
 				E639CDF11C9223C100B5A744 /* SportsViewController.swift in Sources */,
 				E639CDDC1C8FCE1700B5A744 /* NewsDetailViewController.swift in Sources */,
@@ -428,7 +440,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Huella_Deportiva/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Cristian-Melendez.Huella-Deportiva";
+				PRODUCT_BUNDLE_IDENTIFIER = "Javdav.Huella-Deportiva";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Huella_Deportiva/Huella_Deportiva-Bridging-Header.h";
@@ -446,7 +458,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Huella_Deportiva/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Cristian-Melendez.Huella-Deportiva";
+				PRODUCT_BUNDLE_IDENTIFIER = "Javdav.Huella-Deportiva";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Huella_Deportiva/Huella_Deportiva-Bridging-Header.h";

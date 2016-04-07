@@ -29,7 +29,7 @@ class PhotosViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker.allowsEditing = true
         self.presentViewController(imagePicker, animated: true, completion: nil)
         
-        photoView!.image = image
+        //photoView!.image = image
         
         
          //self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -45,14 +45,22 @@ class PhotosViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
         imagePicker.delegate = self
+    
         
         presentViewController(imagePicker, animated: true, completion: nil)
         
     }
-    @IBAction func postButton(sender: AnyObject) {
-        let image = resizeImg(photoView.image!, newSize: CGSizeMake(200,200))
+    @IBAction func pictureButton(sender: AnyObject) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .Camera
+        imagePicker.delegate = self
+        presentViewController(imagePicker, animated: true, completion: nil)
         
-        let noticia = Post(title: textField.text!, newsBody: bodyField.text!, user: (PFUser.currentUser()?.username!)!, image: image)
+    }
+    @IBAction func postButton(sender: AnyObject) {
+        let image = resizeImg(self.image, newSize: CGSizeMake(200,200))
+        
+        let noticia = Post(title: textField.text!, newsBody: bodyField.text!, user: (PFUser.currentUser()?.username!)!, image: image, steps: 0)
        
         noticia.post()
         
@@ -69,7 +77,7 @@ class PhotosViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         
         self.image = originalImage
-       // photoView!.image = image
+        photoView!.image = image
         dismissViewControllerAnimated(false, completion: nil)
         
     }
@@ -91,6 +99,9 @@ class PhotosViewController: UIViewController, UIImagePickerControllerDelegate, U
         return newImage
     }
 
+    @IBAction func onTap(sender: AnyObject) {
+         view.endEditing(true)
+    }
     /*
     // MARK: - Navigation
 

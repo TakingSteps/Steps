@@ -20,6 +20,7 @@ class PostCell: UITableViewCell {
     
     @IBOutlet weak var authorLabel: UILabel!
     
+    @IBOutlet weak var stepCounter: UILabel!
     
     @IBOutlet weak var photoView: PFImageView!
     var timeStampString: String?
@@ -33,6 +34,7 @@ class PostCell: UITableViewCell {
             authorLabel.text = news["user"] as? String
             photoView.file = news["image"] as? PFFile
             photoView.loadInBackground()
+            stepCounter.text = ("\(news["steps"]) Steps") as String
             
             // let timeStamp = news["_created_at"]["$date"]!
               //  as? NSDate

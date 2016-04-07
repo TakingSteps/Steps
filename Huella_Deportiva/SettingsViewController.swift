@@ -8,13 +8,34 @@
 
 import UIKit
 import Parse
+import SlideMenuControllerSwift
+import ParseUI
 
 
 class SettingsViewController: UIViewController {
+    @IBOutlet weak var currentUserLabel: UILabel!
 
+    @IBOutlet weak var profileImage: PFImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+            currentUserLabel.text = PFUser.currentUser()?.username
+            profileImage.file = PFUser.currentUser()?.objectForKey("prof_image") as? PFFile
+            profileImage.loadInBackground()
+            
+        
+
+        
+        
+        
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
