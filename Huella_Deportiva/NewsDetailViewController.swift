@@ -22,7 +22,10 @@ class NewsDetailViewController: UIViewController {
    
     @IBOutlet weak var deleteButton: UIButton!
    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var infoView: UIView!
+    var step: Bool!
     var news: [PFObject]!
     var index: Int?
     //var image: UIImage!
@@ -33,6 +36,7 @@ class NewsDetailViewController: UIViewController {
         super.viewDidLoad()
         
         let new = news![index!]
+        scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: infoView.frame.origin.y + infoView.frame.size.height)
         
         newsTitleLabel.text = new["title"] as? String
         newsBodyLabel.text = new["body"] as? String
@@ -101,15 +105,25 @@ class NewsDetailViewController: UIViewController {
 
     @IBAction func stepButton(sender: AnyObject) {
        let new = news![index!]
+               
         
-        new.incrementKey("steps")
-        new.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError?) -> Void in
-            if (success) {
-                // The score key has been incremented
-            } else {
-                // There was a problem, check error.description
-            }
+        
+        
+        
+            new.incrementKey("steps")
+        
+            new.saveInBackgroundWithBlock {
+                (success: Bool, error: NSError?) -> Void in
+                if (success) {
+                    
+                    
+                } else {
+                    
+                    
+                }
+            
+        
+        
         }
         
         stepButton.enabled = false
@@ -148,6 +162,8 @@ class NewsDetailViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        
     }
     */
 

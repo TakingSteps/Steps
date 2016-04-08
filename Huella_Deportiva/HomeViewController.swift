@@ -18,6 +18,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     
     var news: [PFObject]!
+    
 
     //
     
@@ -130,6 +131,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             newsDetailVC.news = news
             newsDetailVC.index = index
+            
             
             
             

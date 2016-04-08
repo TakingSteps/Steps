@@ -18,18 +18,18 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var profileImage: PFImageView!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+       
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
             currentUserLabel.text = PFUser.currentUser()?.username
             profileImage.file = PFUser.currentUser()?.objectForKey("prof_image") as? PFFile
             profileImage.loadInBackground()
             
         
-
+                
         
         
         

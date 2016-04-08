@@ -48,6 +48,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             newUser.password = passwordText.text
             newUser["prof_image"] = pfImage
             newUser["admin"] = 1
+            newUser["steps"] = 0
             
             newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 if success{
