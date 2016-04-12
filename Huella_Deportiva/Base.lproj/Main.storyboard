@@ -196,6 +196,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="t5N-Tv-iZB" kind="custom" identifier="Settings" customClass="SWRevealViewControllerSeguePushController" id="7oM-7H-cHA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -376,7 +379,6 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="MenuButton" destination="Kbu-Cc-bb4" id="oRP-0W-sWq"/>
                         <outlet property="currentUserLabel" destination="2sm-BI-4Br" id="hee-6R-avT"/>
                         <outlet property="profileImage" destination="eBH-Eu-HNP" id="xr5-hC-SyS"/>
                         <segue destination="Vhb-XG-BwY" kind="presentation" identifier="logout" id="eD3-sS-uZk"/>
@@ -384,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nma-4d-dOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221" y="-1716"/>
+            <point key="canvasLocation" x="336" y="-1654"/>
         </scene>
         <!--Sports View Controller-->
         <scene sceneID="iXh-fo-Ij2">
@@ -558,68 +560,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFx-4C-cJo">
-                                <rect key="frame" x="20" y="82" width="264" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smj-0b-VDa">
-                                <rect key="frame" x="20" y="518" width="52" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="News Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAg-er-qo9">
-                                <rect key="frame" x="20" y="300" width="280" height="194"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PaW-nK-Bh9" customClass="PFImageView">
-                                <rect key="frame" x="20" y="124" width="280" height="168"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="bnY-ce-sX2"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u6-0f-eVa">
-                                <rect key="frame" x="138" y="514" width="45" height="30"/>
-                                <state key="normal" title="Delete"/>
-                                <connections>
-                                    <action selector="deleteButton:" destination="2Vq-Zc-8Bw" eventType="touchUpInside" id="etD-AP-arL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5w-Kb-p15">
-                                <rect key="frame" x="211" y="86" width="89" height="30"/>
-                                <state key="normal" title="Step forward"/>
-                                <connections>
-                                    <action selector="stepButton:" destination="2Vq-Zc-8Bw" eventType="touchUpInside" id="lSs-Iu-n1L"/>
-                                </connections>
-                            </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LKj-Tb-dvS">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LKj-Tb-dvS">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PaW-nK-Bh9" customClass="PFImageView">
+                                        <rect key="frame" x="20" y="147" width="280" height="168"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="bnY-ce-sX2"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFx-4C-cJo">
+                                        <rect key="frame" x="20" y="80" width="280" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d3o-Q0-It1">
                                         <rect key="frame" x="0.0" y="568" width="320" height="284"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAg-er-qo9">
+                                        <rect key="frame" x="20" y="307" width="280" height="194"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5w-Kb-p15">
+                                        <rect key="frame" x="211" y="91" width="89" height="30"/>
+                                        <state key="normal" title="Step forward"/>
+                                        <connections>
+                                            <action selector="stepButton:" destination="2Vq-Zc-8Bw" eventType="touchUpInside" id="lSs-Iu-n1L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u6-0f-eVa">
+                                        <rect key="frame" x="137" y="530" width="45" height="30"/>
+                                        <state key="normal" title="Delete"/>
+                                        <connections>
+                                            <action selector="deleteButton:" destination="2Vq-Zc-8Bw" eventType="touchUpInside" id="etD-AP-arL"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smj-0b-VDa">
+                                        <rect key="frame" x="20" y="525" width="94" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="smj-0b-VDa" firstAttribute="top" secondItem="NAg-er-qo9" secondAttribute="bottom" constant="24" id="1dt-25-Fmt"/>
-                            <constraint firstItem="PaW-nK-Bh9" firstAttribute="top" secondItem="lls-l5-fhv" secondAttribute="top" constant="169" id="97w-lv-9gh"/>
-                            <constraint firstItem="PaW-nK-Bh9" firstAttribute="leading" secondItem="lls-l5-fhv" secondAttribute="leadingMargin" constant="24" id="DKU-UL-s3e"/>
-                            <constraint firstAttribute="trailing" secondItem="NAg-er-qo9" secondAttribute="trailing" constant="20" id="Kzn-Ta-bsM"/>
-                            <constraint firstItem="PaW-nK-Bh9" firstAttribute="top" secondItem="QFx-4C-cJo" secondAttribute="bottom" constant="36" id="Lt6-Bk-Fqz"/>
-                            <constraint firstItem="PaW-nK-Bh9" firstAttribute="centerX" secondItem="lls-l5-fhv" secondAttribute="centerX" id="P16-QY-dnv"/>
-                            <constraint firstItem="NAg-er-qo9" firstAttribute="leading" secondItem="lls-l5-fhv" secondAttribute="leading" constant="20" id="QAs-6w-rbr"/>
-                            <constraint firstItem="PaW-nK-Bh9" firstAttribute="centerX" secondItem="NAg-er-qo9" secondAttribute="centerX" id="Qyc-YW-UYN"/>
-                            <constraint firstItem="NAg-er-qo9" firstAttribute="top" secondItem="PaW-nK-Bh9" secondAttribute="bottom" constant="3" id="hP1-aX-Yg6"/>
-                            <constraint firstItem="QFx-4C-cJo" firstAttribute="leading" secondItem="lls-l5-fhv" secondAttribute="leading" constant="20" id="j3j-8N-Kwk"/>
-                            <constraint firstAttribute="trailing" secondItem="QFx-4C-cJo" secondAttribute="trailing" constant="36" id="np1-QQ-NXp"/>
-                            <constraint firstItem="QFx-4C-cJo" firstAttribute="top" secondItem="fOl-kK-Bpk" secondAttribute="bottom" constant="18" id="vUy-gd-X4W"/>
+                            <constraint firstItem="LKj-Tb-dvS" firstAttribute="leading" secondItem="lls-l5-fhv" secondAttribute="leading" id="1QO-CF-yDQ"/>
+                            <constraint firstItem="LKj-Tb-dvS" firstAttribute="top" secondItem="lls-l5-fhv" secondAttribute="top" id="Jew-EO-5Vi"/>
+                            <constraint firstAttribute="trailing" secondItem="LKj-Tb-dvS" secondAttribute="trailing" id="PWk-AC-IPu"/>
+                            <constraint firstItem="LjU-6e-sRV" firstAttribute="top" secondItem="LKj-Tb-dvS" secondAttribute="bottom" id="d4E-e9-Eao"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

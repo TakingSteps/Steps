@@ -34,15 +34,7 @@ class MenuTableViewController: UITableViewController {
         return cell
     }
     
-    @IBAction func logoutButton(sender: AnyObject) {
-        PFUser.logOutInBackground()
-        if PFUser.currentUser() != nil{
-            print("Something went wrong")
-        }else{
-            self.performSegueWithIdentifier("loginSegue", sender: nil)
-            print("good job")
-        }
-    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
