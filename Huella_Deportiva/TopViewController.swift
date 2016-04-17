@@ -11,8 +11,8 @@ import SlideMenuControllerSwift
 import Parse
 
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
- {
+class TopViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+{
     
     @IBOutlet weak var MenuButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
@@ -21,12 +21,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var steps = false
     
     
-
+    
     //
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.dataSource = self
         tableView.delegate = self
         MenuButton.target = self.revealViewController()
@@ -39,16 +39,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         refreshControl.addTarget(self, action:"refreshControlAction:",forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.insertSubview(refreshControl, atIndex: 0)
-
         
-    
+        
+        
         tableView.reloadData()
         // Do any additional setup after loading the view.
     }
     
     func refreshData(){
         let query = PFQuery(className: "news")
-        query.orderByDescending("createdAt")
+        query.orderByDescending("steps")
         query.includeKey("author")
         query.limit = 20
         
@@ -65,7 +65,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -77,7 +77,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             return news.count
         }
         else{
-        return 0
+            return 0
         }
     }
     
@@ -108,9 +108,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         )
         
         let task : NSURLSessionDataTask = session.dataTaskWithRequest(request,completionHandler: { (data, response, error) in
-                                                                        
+            
             self.tableView.reloadData()
-            refreshControl.endRefreshing()	
+            refreshControl.endRefreshing()
         });
         task.resume()
     }
@@ -133,7 +133,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             newsDetailVC.news = news
             newsDetailVC.index = index
-           
+            
             
             
             
@@ -142,11 +142,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
         }
     }
+    
+    
+    
+}
 
-    
-            
-        }
-        
-    
+
 
 

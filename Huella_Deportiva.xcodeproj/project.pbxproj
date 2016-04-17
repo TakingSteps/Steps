@@ -27,6 +27,7 @@
 		F69B18891CB4BB6E004EFDB3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B18881CB4BB6E004EFDB3 /* SignUpViewController.swift */; };
 		F6A9DA831CB0DBF7009CAEEA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A9DA821CB0DBF7009CAEEA /* LoginViewController.swift */; };
 		F6DE4E661CB1A7AE00FBA77E /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE4E651CB1A7AE00FBA77E /* TwitterClient.swift */; };
+		F6FCCF1A1CC4561000BC54B4 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FCCF191CC4561000BC54B4 /* TopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		F69B18881CB4BB6E004EFDB3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F6A9DA821CB0DBF7009CAEEA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F6DE4E651CB1A7AE00FBA77E /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
+		F6FCCF191CC4561000BC54B4 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				E639CDD21C8FC0D100B5A744 /* HomeViewController.swift */,
 				F61D920B1CB1D65500B05FF4 /* SettingsViewController.swift */,
+				F6FCCF191CC4561000BC54B4 /* TopViewController.swift */,
 				E639CDDB1C8FCE1700B5A744 /* NewsDetailViewController.swift */,
 				E639CDEC1C92229500B5A744 /* ScheduleViewController.swift */,
 				E639CDEE1C92233600B5A744 /* StandingsViewController.swift */,
@@ -320,6 +323,7 @@
 				E639CDDA1C8FC52500B5A744 /* News.swift in Sources */,
 				F69B18891CB4BB6E004EFDB3 /* SignUpViewController.swift in Sources */,
 				E639CDD81C8FC31200B5A744 /* PostCell.swift in Sources */,
+				F6FCCF1A1CC4561000BC54B4 /* TopViewController.swift in Sources */,
 				E639CDF11C9223C100B5A744 /* SportsViewController.swift in Sources */,
 				E639CDDC1C8FCE1700B5A744 /* NewsDetailViewController.swift in Sources */,
 				F6A9DA831CB0DBF7009CAEEA /* LoginViewController.swift in Sources */,

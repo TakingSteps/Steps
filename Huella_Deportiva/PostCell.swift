@@ -23,23 +23,36 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var stepCounter: UILabel!
     
     @IBOutlet weak var photoView: PFImageView!
-    var timeStampString: String?
+    var timeStampString: String!
+    var timestamp: NSDate!
     
     
     
     var news: PFObject!{
         didSet{
+        
+            
+            
+            
+            
             newsTitle.text = news["title"] as? String
             newsBodyLabel.text = news["body"] as? String
             authorLabel.text = news["user"] as? String
             photoView.file = news["image"] as? PFFile
             photoView.loadInBackground()
             stepCounter.text = ("\(news["steps"]) Steps") as String
+            timeLabel.text = "\(returnTime(news.createdAt!)) ago" as String
             
             // let timeStamp = news["_created_at"]["$date"]!
               //  as? NSDate
             
-           // timeLabel.text = "\(returnTime(timeStamp!))"
+            news.createdAt
+            
+           
+            
+            timeStampString = news["_created_at"] as? String
+            
+            
         }
     }
     

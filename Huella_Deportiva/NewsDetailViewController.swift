@@ -22,15 +22,18 @@ class NewsDetailViewController: UIViewController {
    
     @IBOutlet weak var deleteButton: UIButton!
    
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var infoView: UIView!
-    var step: Bool!
+    var step = false
     var news: [PFObject]!
     var index: Int?
     //var image: UIImage!
     
     //var new: PFObject!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +52,17 @@ class NewsDetailViewController: UIViewController {
         //let url = NSURL(string: (file?.url)!)
         //photoView.setImageWithURL(url!)
         //print(image)
+        
+        
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'"
+        dateFormatter.dateFormat = "HH':'mm'|'dd'-'MM'-'yy'"
+        let date = dateFormatter.stringFromDate(new.createdAt! as NSDate)
+        print(date)
+        timeLabel.text = date as String
+        
+        
         
         let user = PFUser.currentUser()!.username! as String
         let usern = new["user"] as! String
@@ -105,13 +119,30 @@ class NewsDetailViewController: UIViewController {
 
     @IBAction func stepButton(sender: AnyObject) {
        let new = news![index!]
-               
         
         
+        if !step{
+           new.incrementKey("steps")
+            new.saveInBackgroundWithBlock {
+                (success: Bool, error: NSError?) -> Void in
+                if (success) {
+                    self.step = true
+                    let new = self.news[self.index!]
+                    print("\(new["steps"])")
+                    
+                } else {
+                    
+                    
+                }
+                
+            }
         
         
-            new.incrementKey("steps")
-        
+        }else{
+            new.incrementKey("steps", byAmount: -1)
+            self.step = false
+            let new = news[index!]
+            print("\(new["steps"])")
             new.saveInBackgroundWithBlock {
                 (success: Bool, error: NSError?) -> Void in
                 if (success) {
@@ -121,12 +152,12 @@ class NewsDetailViewController: UIViewController {
                     
                     
                 }
+            }
             
-        
-        
+            
         }
         
-        stepButton.enabled = false
+      //  stepButton.enabled = false
 
 
     }
@@ -155,7 +186,7 @@ class NewsDetailViewController: UIViewController {
     }*/
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -164,7 +195,10 @@ class NewsDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
         
         
+        let homeVC = segue.destinationViewController as! HomeViewController
+        homeVC.steps = self.step
+        
     }
-    */
+    
 
 }
