@@ -5,15 +5,17 @@
 The following **required** functionality is completed:
 
 - [x] User can see the latest news
-- [x] User can see a details of the news
+- [x] User can see details of the news
 - [x] User can post news
-- [x] User can "Step Foward" a post
+- [x] User can "Step Forward" a post
 
 The following **optional** features are implemented:
 
-- [ ] User can stream live games
-- [ ] User can share news to FaceBook and Twitter
-- [ ] User can access a photo gallery 
+- [x] Top Posts
+- [ ] Steps Leaderboard
+- [ ] User can share news to twitter
+- [ ] News/Event Location
+- [ ] Calendar with events
 
 ##Data Scheme
 **User Data**
