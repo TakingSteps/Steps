@@ -16,6 +16,22 @@ The following **optional** features are implemented:
 - [ ] User can access a photo gallery 
 
 ##Data Scheme
+**User Data**
 
+| User           |    _User        |
+|----------------|-----------------|
+| username       | username        |
+| password       | _hashed_password|
+| is admin?      | admin           |
+| profile picture| prof_image      |
 
+**News Data**
+
+| News           |    news        |
+|----------------|----------------|
+| news title     | title          |
+| news body      | body           |
+| author         | user           |
+| news image     | image          |
+| post date      |_created_at     |
 
