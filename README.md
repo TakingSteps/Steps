@@ -1,4 +1,4 @@
-*Huella deportiva*
+##Huella deportiva
 
 **Huella deportiva** is an app that let the user read news and information about the University sports teams and their competitions
 
@@ -15,7 +15,7 @@ The following **optional** features are implemented:
 - [ ] User can share news to FaceBook and Twitter
 - [ ] User can access a photo gallery 
 
-WireFrame: 
+##Data Scheme
 
-<img src='http://i.imgur.com/iitqhV3.jpg' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
