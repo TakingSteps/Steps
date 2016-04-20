@@ -18,9 +18,15 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var profileImage: PFImageView!
     
     
+    @IBOutlet weak var MenuButton: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        MenuButton.target = self.revealViewController()
+        
+        MenuButton.action = Selector("revealToggle:")
        
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         

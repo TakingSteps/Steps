@@ -39,7 +39,7 @@ class NewsDetailViewController: UIViewController {
         super.viewDidLoad()
         
         let new = news![index!]
-        scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: infoView.frame.origin.y + infoView.frame.size.height)
+     //   scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: infoView.frame.origin.y + infoView.frame.size.height)
         
         newsTitleLabel.text = new["title"] as? String
         newsBodyLabel.text = new["body"] as? String

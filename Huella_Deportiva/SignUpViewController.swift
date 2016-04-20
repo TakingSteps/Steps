@@ -37,7 +37,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         let c = userText.text?.characters.count
         let d = passwordText.text?.characters.count
         
-        if ( c != 0 && d != 0){
+        if ( c != 0 && d != 0 && c <= 15) {
            
             let image = resizeImg(self.image, newSize: CGSizeMake(200,200))
             let pfImage = getPFFileFromImage(image)
@@ -62,10 +62,21 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                     }
             }
         }else{
+            if c == 0{
+                let alert = UIAlertController(title: "Try again", message: "Missing username", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }else if c>15{
             print("missing username or password")
-            let alert = UIAlertController(title: "Try again", message: "Missing username or password", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Try again", message: "Username must be less than 15 characters", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
+            }else{
+                let alert = UIAlertController(title: "Try again", message: "Missing password", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+            }
         }
         
        

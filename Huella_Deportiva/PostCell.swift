@@ -38,13 +38,14 @@ class PostCell: UITableViewCell {
             newsTitle.text = news["title"] as? String
             newsBodyLabel.text = news["body"] as? String
             authorLabel.text = news["user"] as? String
-            photoView.file = news["image"] as? PFFile
-            photoView.loadInBackground()
+           // photoView.file = news["image"] as? PFFile
+          //  photoView.loadInBackground()
             stepCounter.text = ("\(news["steps"]) Steps") as String
-            timeLabel.text = "\(returnTime(news.createdAt!)) ago" as String
+            timeLabel.text = "\(returnTime(news.createdAt!))" as String
             
             // let timeStamp = news["_created_at"]["$date"]!
               //  as? NSDate
+            
             
             news.createdAt
             
@@ -59,19 +60,19 @@ class PostCell: UITableViewCell {
     func returnTime(createdAt : NSDate) -> String{
         let seconds = NSDate().timeIntervalSinceDate(createdAt)
         if(seconds < 60){
-            return String("\(seconds)s")
+            return String("Just Now")
         }else{
             let minutes = Int(seconds/60)
             if(minutes > 59){
                 let hours = Int(minutes/60)
                 if hours > 23{
                     let days = Int(hours/24)
-                    return String("\(days)d")
+                    return String("\(days)d ago")
                 }else{
-                    return String("\(hours)h")
+                    return String("\(hours)h ago")
                 }
             }else{
-                return String("\(minutes)m")
+                return String("\(minutes)m ago")
             }
         }
     }
