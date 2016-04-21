@@ -17,6 +17,14 @@ The following **optional** features are implemented:
 - [ ] News/Event Location
 - [ ] Calendar with events
 
+## Video Walkthrough 
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://i.imgur.com/R8vvklL.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
 ##Data Scheme
 **User Data**
 
