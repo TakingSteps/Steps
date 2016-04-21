@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Steps-->
+        <!--Steps -->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Huella_Deportiva" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,7 +45,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVZ-mw-Fym">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVZ-mw-Fym">
                                                     <rect key="frame" x="153" y="191" width="82" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="82" id="xH1-lS-W7J"/>
@@ -108,7 +108,7 @@
                             <constraint firstAttribute="trailing" secondItem="xnL-Be-uxK" secondAttribute="trailing" id="koG-vJ-92v"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Steps" id="t5F-i8-cSM">
+                    <navigationItem key="navigationItem" title="Steps " id="t5F-i8-cSM">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="utj-A9-HmF"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="J4Z-Fr-CkT">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1iW-RA-aRP">
@@ -363,26 +363,28 @@
                                 <rect key="frame" x="20" y="72" width="280" height="188"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current user" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sm-BI-4Br">
-                                <rect key="frame" x="35" y="257" width="250" height="53"/>
+                                <rect key="frame" x="35" y="268" width="250" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="c3n-qZ-qmT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="SUL-B8-7sb" firstAttribute="leading" secondItem="bmr-V3-65D" secondAttribute="leadingMargin" constant="34" id="F0x-b4-p3k"/>
-                            <constraint firstItem="2sm-BI-4Br" firstAttribute="centerX" secondItem="SUL-B8-7sb" secondAttribute="centerX" id="JWn-dy-PFU"/>
-                            <constraint firstItem="2sm-BI-4Br" firstAttribute="leading" secondItem="bmr-V3-65D" secondAttribute="leadingMargin" constant="19" id="KFH-5y-MDj"/>
-                            <constraint firstAttribute="bottom" secondItem="SUL-B8-7sb" secondAttribute="bottom" constant="20" symbolic="YES" id="Pe6-Ug-cHB"/>
-                            <constraint firstItem="SUL-B8-7sb" firstAttribute="top" secondItem="eBH-Eu-HNP" secondAttribute="bottom" constant="58" id="bEh-85-Slq"/>
-                            <constraint firstItem="eBH-Eu-HNP" firstAttribute="centerX" secondItem="2sm-BI-4Br" secondAttribute="centerX" id="bnA-Hx-K08"/>
-                            <constraint firstItem="2sm-BI-4Br" firstAttribute="top" secondItem="acS-G4-kjx" secondAttribute="bottom" constant="237" id="ec2-AM-xmh"/>
-                            <constraint firstItem="eBH-Eu-HNP" firstAttribute="top" secondItem="acS-G4-kjx" secondAttribute="bottom" constant="52" id="ew0-JQ-Ru1"/>
-                            <constraint firstItem="eBH-Eu-HNP" firstAttribute="centerX" secondItem="bmr-V3-65D" secondAttribute="centerX" id="nES-Ob-sLP"/>
-                            <constraint firstItem="SUL-B8-7sb" firstAttribute="top" secondItem="2sm-BI-4Br" secondAttribute="bottom" constant="8" symbolic="YES" id="whH-YY-ylw"/>
-                            <constraint firstItem="eBH-Eu-HNP" firstAttribute="leading" secondItem="bmr-V3-65D" secondAttribute="leadingMargin" constant="4" id="x3N-51-gY0"/>
-                            <constraint firstItem="2sm-BI-4Br" firstAttribute="centerY" secondItem="bmr-V3-65D" secondAttribute="centerY" id="xko-8c-CNc"/>
+                            <constraint firstItem="eBH-Eu-HNP" firstAttribute="centerX" secondItem="2sm-BI-4Br" secondAttribute="centerX" id="3b9-TP-xhN"/>
+                            <constraint firstItem="SUL-B8-7sb" firstAttribute="leading" secondItem="bmr-V3-65D" secondAttribute="leadingMargin" constant="34" id="Eaf-xv-tv8"/>
+                            <constraint firstItem="2sm-BI-4Br" firstAttribute="centerX" secondItem="SUL-B8-7sb" secondAttribute="centerX" id="MMm-wy-uBb"/>
+                            <constraint firstItem="wuu-Lf-o5U" firstAttribute="top" secondItem="2sm-BI-4Br" secondAttribute="bottom" constant="247" id="Sca-5n-dCe"/>
+                            <constraint firstItem="SUL-B8-7sb" firstAttribute="top" secondItem="eBH-Eu-HNP" secondAttribute="bottom" constant="58" id="Wti-QP-X6W"/>
+                            <constraint firstItem="2sm-BI-4Br" firstAttribute="top" secondItem="eBH-Eu-HNP" secondAttribute="bottom" constant="8" symbolic="YES" id="aGm-8A-9jS"/>
+                            <constraint firstItem="eBH-Eu-HNP" firstAttribute="top" secondItem="acS-G4-kjx" secondAttribute="bottom" constant="52" id="cv8-CC-gTw"/>
+                            <constraint firstAttribute="bottom" secondItem="SUL-B8-7sb" secondAttribute="bottom" constant="20" symbolic="YES" id="gjM-Ao-LsI"/>
+                            <constraint firstItem="eBH-Eu-HNP" firstAttribute="centerX" secondItem="bmr-V3-65D" secondAttribute="centerX" id="sHl-yF-dts"/>
+                            <constraint firstItem="eBH-Eu-HNP" firstAttribute="leading" secondItem="bmr-V3-65D" secondAttribute="leadingMargin" constant="4" id="sVf-rP-PpD"/>
+                            <constraint firstItem="2sm-BI-4Br" firstAttribute="leading" secondItem="bmr-V3-65D" secondAttribute="leadingMargin" constant="19" id="zXj-Hv-wyt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s8L-dk-yM9">
@@ -910,7 +912,7 @@
                                                         </imageView>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb1-9T-bCD">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb1-9T-bCD">
                                                     <rect key="frame" x="99" y="170" width="91" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="91" id="gKB-cr-bjS"/>
