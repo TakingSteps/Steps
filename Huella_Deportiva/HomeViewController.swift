@@ -88,6 +88,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.news = news![indexPath.row]
         
         cell.newsBodyLabel.sizeToFit()
+        cell.selectionStyle = .None
         
         
         return cell

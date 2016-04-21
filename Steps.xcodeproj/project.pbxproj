@@ -24,6 +24,7 @@
 		E639CDF31C92242F00B5A744 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639CDF21C92242F00B5A744 /* PhotosViewController.swift */; };
 		F60B1DD41CADEC0B00023A99 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B1DD31CADEC0B00023A99 /* Post.swift */; };
 		F61D920C1CB1D65500B05FF4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61D920B1CB1D65500B05FF4 /* SettingsViewController.swift */; };
+		F64AF8CE1CC980DC0047A71E /* stepsLogo 3.png in Resources */ = {isa = PBXBuildFile; fileRef = F64AF8CD1CC980DC0047A71E /* stepsLogo 3.png */; };
 		F69B18891CB4BB6E004EFDB3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B18881CB4BB6E004EFDB3 /* SignUpViewController.swift */; };
 		F6A9DA831CB0DBF7009CAEEA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A9DA821CB0DBF7009CAEEA /* LoginViewController.swift */; };
 		F6DE4E661CB1A7AE00FBA77E /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE4E651CB1A7AE00FBA77E /* TwitterClient.swift */; };
@@ -54,6 +55,7 @@
 		E639CDF21C92242F00B5A744 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		F60B1DD31CADEC0B00023A99 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F61D920B1CB1D65500B05FF4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F64AF8CD1CC980DC0047A71E /* stepsLogo 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stepsLogo 3.png"; path = "../../../../Desktop/stepsLogo 3.png"; sourceTree = "<group>"; };
 		F69B18881CB4BB6E004EFDB3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F6A9DA821CB0DBF7009CAEEA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F6DE4E651CB1A7AE00FBA77E /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				F6A9DA821CB0DBF7009CAEEA /* LoginViewController.swift */,
 				F69B18881CB4BB6E004EFDB3 /* SignUpViewController.swift */,
+				F64AF8CD1CC980DC0047A71E /* stepsLogo 3.png */,
 			);
 			name = LogInViews;
 			sourceTree = "<group>";
@@ -227,7 +230,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E639CDB71C8FB8AC00B5A744 /* Build configuration list for PBXProject "Huella_Deportiva" */;
+			buildConfigurationList = E639CDB71C8FB8AC00B5A744 /* Build configuration list for PBXProject "Steps" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E639CDCA1C8FB8AC00B5A744 /* LaunchScreen.storyboard in Resources */,
+				F64AF8CE1CC980DC0047A71E /* stepsLogo 3.png in Resources */,
 				E639CDC71C8FB8AC00B5A744 /* Assets.xcassets in Resources */,
 				E639CDC51C8FB8AC00B5A744 /* Main.storyboard in Resources */,
 			);
@@ -472,7 +476,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E639CDB71C8FB8AC00B5A744 /* Build configuration list for PBXProject "Huella_Deportiva" */ = {
+		E639CDB71C8FB8AC00B5A744 /* Build configuration list for PBXProject "Steps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E639CDCC1C8FB8AC00B5A744 /* Debug */,

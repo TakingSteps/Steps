@@ -17,7 +17,7 @@
                BlueprintIdentifier = "E639CDBB1C8FB8AC00B5A744"
                BuildableName = "Huella_Deportiva.app"
                BlueprintName = "Huella_Deportiva"
-               ReferencedContainer = "container:Huella_Deportiva.xcodeproj">
+               ReferencedContainer = "container:Steps.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "E639CDBB1C8FB8AC00B5A744"
             BuildableName = "Huella_Deportiva.app"
             BlueprintName = "Huella_Deportiva"
-            ReferencedContainer = "container:Huella_Deportiva.xcodeproj">
+            ReferencedContainer = "container:Steps.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "E639CDBB1C8FB8AC00B5A744"
             BuildableName = "Huella_Deportiva.app"
             BlueprintName = "Huella_Deportiva"
-            ReferencedContainer = "container:Huella_Deportiva.xcodeproj">
+            ReferencedContainer = "container:Steps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "E639CDBB1C8FB8AC00B5A744"
             BuildableName = "Huella_Deportiva.app"
             BlueprintName = "Huella_Deportiva"
-            ReferencedContainer = "container:Huella_Deportiva.xcodeproj">
+            ReferencedContainer = "container:Steps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
