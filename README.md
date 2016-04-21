@@ -1,20 +1,47 @@
-*Huella deportiva*
+##Huella deportiva
 
 **Huella deportiva** is an app that let the user read news and information about the University sports teams and their competitions
 
 The following **required** functionality is completed:
 
-- [ ] User can see the latest news
-- [ ] User can see a details of the news
-- [ ] User can se the schedule of the teams
+- [x] User can see the latest news
+- [x] User can see details of the news
+- [x] User can post news
+- [x] User can "Step Forward" a post
 
 The following **optional** features are implemented:
 
-- [ ] User can stream live games
-- [ ] User can share news to FaceBook and Twitter
-- [ ] User can access a photo gallery 
+- [x] Top Posts
+- [ ] Steps Leaderboard
+- [ ] User can share news to twitter
+- [ ] News/Event Location
+- [ ] Calendar with events
 
-WireFrame: 
+## Video Walkthrough 
 
-<img src='http://i.imgur.com/iitqhV3.jpg' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+Here's a walkthrough of implemented user stories:
+
+<img src='http://i.imgur.com/R8vvklL.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+##Data Scheme
+**User Data**
+
+| User           |    _User        |
+|----------------|-----------------|
+| username       | username        |
+| password       | _hashed_password|
+| is admin?      | admin           |
+| profile picture| prof_image      |
+
+**News Data**
+
+| News           |    news        |
+|----------------|----------------|
+| news title     | title          |
+| news body      | body           |
+| author         | user           |
+| news image     | image          |
+| post date      |_created_at     |
 
